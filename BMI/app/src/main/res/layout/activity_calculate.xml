@@ -1,0 +1,112 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sahilbehl.bmi.CalculateActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:background="@drawable/materialback">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="BMI CALCULATOR"
+                android:textColor="@color/purple"
+                android:textSize="70sp" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+
+                    android:id="@+id/inputWeight"
+                    android:inputType="numberDecimal"
+                    android:background="@color/colorPrimary"
+                    android:textColorHint="#fff"
+                    android:textColor="#fff"
+                    android:layout_marginTop="80dp"
+                    android:layout_gravity="center"
+                    android:hint="Weight in Kg"
+                    android:padding="10dp"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/inputHeight"
+                    android:inputType="numberDecimal"
+                    android:background="@color/colorPrimary"
+                    android:textColorHint="#fff"
+                    android:textColor="#fff"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    android:hint="Height In cm"
+                    android:padding="10dp"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    />
+
+                <Button
+                    android:id="@+id/calculateButton"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:padding="10dp"
+                    android:text="CALCULATE"
+                    android:textColor="#fff"
+                    android:onClick="onCalClick"
+                    />
+                <Button
+                    android:id="@+id/saveButton"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:padding="10dp"
+                    android:text="SAVE"
+                    android:textColor="#fff"
+                    android:onClick="onSaveClick"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/bmi"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text=""
+                    android:textSize="36dp"
+                    android:layout_gravity="center"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/back"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Go Back"
+                    android:layout_gravity="center"
+                    android:onClick="onBackClick"
+                    />
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>
